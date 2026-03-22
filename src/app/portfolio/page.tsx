@@ -27,7 +27,7 @@ export default function PortfolioPage() {
       <div className="text-center" style={{ marginBottom: '60px' }}>
         <h1 style={{ fontSize: '3.5rem', marginBottom: '16px' }}>My Portfolio</h1>
         <p style={{ fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto' }}>
-          My name is Lizzie, and I'm a 13-year-old software developer with lots of experience. I love building websites for kid-owned businesses. Check out some of my recent builds!
+          My name is Lizzie, and I&apos;m a 13-year-old software developer with lots of experience. I love building websites for kid-owned businesses. Check out some of my recent builds!
         </p>
       </div>
 
