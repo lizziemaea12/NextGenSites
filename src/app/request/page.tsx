@@ -49,6 +49,19 @@ export default function RequestPage() {
       console.error("Supabase error:", error);
       alert("Something went wrong. Try again.");
     } else {
+      // Trigger email notification
+      try {
+        await fetch('/api/notify', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+      } catch (notifyError) {
+        console.error("Notification error:", notifyError);
+      }
+
       setSuccess(true);
     }
 
