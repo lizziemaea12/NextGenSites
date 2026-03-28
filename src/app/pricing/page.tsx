@@ -11,7 +11,7 @@ export default function Pricing() {
             Pricing & Tiers
           </h1>
           <p style={{ fontSize: '1.25rem', color: '#475569', marginBottom: '0', maxWidth: '600px', margin: '0 auto' }}>
-            Choose the perfect plan for your kid-owned business. 
+            Choose the perfect plan for your kid-owned business.
             No hidden fees, just simple pricing for professional results.
           </p>
         </div>
@@ -71,11 +71,11 @@ export default function Pricing() {
           </div>
 
           {/* Note Section */}
-          <div style={{ 
-            marginTop: '80px', 
-            padding: '32px', 
-            backgroundColor: 'var(--background)', 
-            borderRadius: 'var(--radius-lg)', 
+          <div style={{
+            marginTop: '80px',
+            padding: '32px',
+            backgroundColor: 'var(--background)',
+            borderRadius: 'var(--radius-lg)',
             border: '1px solid var(--border)',
             maxWidth: '900px',
             margin: '80px auto 0'
@@ -107,18 +107,18 @@ export default function Pricing() {
           </div>
           <div style={{ position: 'relative', maxWidth: '1000px', margin: '0 auto' }}>
             {/* Step Line (Mobile hidden) */}
-            <div style={{ 
-              position: 'absolute', top: '40px', left: '20px', right: '20px', 
+            <div style={{
+              position: 'absolute', top: '40px', left: '20px', right: '20px',
               height: '2px', background: 'var(--border)', zIndex: 0,
               display: 'none' // We'll handle this with a simpler approach for now
             }}></div>
-            
+
             <div className="grid-cols-2" style={{ gap: '40px', maxWidth: '800px', margin: '0 auto' }}>
               <div className="text-center" style={{ position: 'relative', zIndex: 1 }}>
-                <div style={{ 
-                  background: 'var(--surface)', color: 'var(--primary)', 
-                  width: '64px', height: '64px', borderRadius: '50%', 
-                  display: 'flex', alignItems: 'center', justifyContent: 'center', 
+                <div style={{
+                  background: 'var(--surface)', color: 'var(--primary)',
+                  width: '64px', height: '64px', borderRadius: '50%',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
                   margin: '0 auto 20px', boxShadow: 'var(--shadow-md)', border: '2px solid var(--primary-light)'
                 }}>
                   <Rocket size={28} />
@@ -127,22 +127,22 @@ export default function Pricing() {
                 <p>Fill out the request form with your business details and tier choice.</p>
               </div>
               <div className="text-center" style={{ position: 'relative', zIndex: 1 }}>
-                <div style={{ 
-                  background: 'var(--surface)', color: 'var(--primary)', 
-                  width: '64px', height: '64px', borderRadius: '50%', 
-                  display: 'flex', alignItems: 'center', justifyContent: 'center', 
+                <div style={{
+                  background: 'var(--surface)', color: 'var(--primary)',
+                  width: '64px', height: '64px', borderRadius: '50%',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
                   margin: '0 auto 20px', boxShadow: 'var(--shadow-md)', border: '2px solid var(--primary-light)'
                 }}>
                   <MessageSquare size={28} />
                 </div>
                 <h3>2. We Chat</h3>
-                <p>We'll talk about your specific needs, colors, and products to get it just right.</p>
+                <p>We&apos;ll talk about your specific needs, colors, and products to get it just right.</p>
               </div>
               <div className="text-center" style={{ position: 'relative', zIndex: 1 }}>
-                <div style={{ 
-                  background: 'var(--surface)', color: 'var(--primary)', 
-                  width: '64px', height: '64px', borderRadius: '50%', 
-                  display: 'flex', alignItems: 'center', justifyContent: 'center', 
+                <div style={{
+                  background: 'var(--surface)', color: 'var(--primary)',
+                  width: '64px', height: '64px', borderRadius: '50%',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
                   margin: '0 auto 20px', boxShadow: 'var(--shadow-md)', border: '2px solid var(--primary-light)'
                 }}>
                   <Video size={28} />
@@ -151,10 +151,10 @@ export default function Pricing() {
                 <p>I build a non-publishable version and send you a video walk-through.</p>
               </div>
               <div className="text-center" style={{ position: 'relative', zIndex: 1 }}>
-                <div style={{ 
-                  background: 'var(--surface)', color: 'var(--primary)', 
-                  width: '64px', height: '64px', borderRadius: '50%', 
-                  display: 'flex', alignItems: 'center', justifyContent: 'center', 
+                <div style={{
+                  background: 'var(--surface)', color: 'var(--primary)',
+                  width: '64px', height: '64px', borderRadius: '50%',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
                   margin: '0 auto 20px', boxShadow: 'var(--shadow-md)', border: '2px solid var(--primary-light)'
                 }}>
                   <LinkIcon size={28} />
