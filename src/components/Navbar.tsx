@@ -19,6 +19,7 @@ export default function Navbar() {
         <nav style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
           <Link href="/about" style={{ fontWeight: 600 }}>Why Me?</Link>
           <Link href="/portfolio" style={{ fontWeight: 600 }}>Portfolio</Link>
+          <Link href="/pricing" style={{ fontWeight: 600 }}>Pricing</Link>
           <Link href="/request" className="btn btn-primary" style={{ padding: '8px 20px' }}>Get Your Site</Link>
         </nav>
       </div>

@@ -15,7 +15,7 @@ const mockProjects = [
   },
   {
     id: 3,
-    name: "Sugar Shack",
+    name: "The Little Sweetery",
     image: "https://wavbbwkrmeeqjmdvllvj.supabase.co/storage/v1/object/public/site-images/sugarshackplaceholder.png", //will be updated with actual image
     description: "Sweet site selling sweets and treats. Featured a gallery of sweets, customer ratings, and a booking form for events."
   }

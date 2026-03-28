@@ -83,11 +83,13 @@ export default function Home() {
           <div className="grid-cols-3">
             <div className="card" style={{ display: 'flex', flexDirection: 'column', textAlign: 'left' }}>
               <h3 style={{ fontSize: '1.5rem', marginBottom: '8px' }}>Free Foundation</h3>
-              <p style={{ fontWeight: 700, fontSize: '2rem', color: 'var(--text-main)', marginBottom: '24px' }}>$0</p>
+              <p style={{ fontWeight: 700, fontSize: '2rem', color: 'var(--text-main)', marginBottom: '8px' }}>$0</p>
+              <p style={{ fontSize: '0.875rem', marginBottom: '24px', fontWeight: 600 }}>Built in 5-7 days</p>
               <ul style={{ listStyle: 'none', marginBottom: '32px', display: 'flex', flexDirection: 'column', gap: '12px', flex: 1 }}>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle size={20} color="var(--primary)" /> Static front-end site</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle size={20} color="var(--primary)" /> Basic product list</li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle size={20} color="var(--primary)" /> 1-page site</li>
                 <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle size={20} color="var(--primary)" /> Custom colors</li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle size={20} color="var(--primary)" /> Product list</li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle size={20} color="var(--primary)" /> Contact info</li>
               </ul>
               <Link href="/request?tier=free" className="btn btn-secondary" style={{ width: '100%' }}>Choose Free</Link>
             </div>
@@ -98,23 +100,27 @@ export default function Home() {
                 padding: '4px 16px', borderRadius: '99px', fontSize: '0.875rem', fontWeight: 600
               }}>Most Popular</span>
               <h3 style={{ fontSize: '1.5rem', marginBottom: '8px' }}>Starter Shop</h3>
-              <p style={{ fontWeight: 700, fontSize: '2rem', color: 'var(--text-main)', marginBottom: '24px' }}>$20</p>
+              <p style={{ fontWeight: 700, fontSize: '2rem', color: 'var(--text-main)', marginBottom: '8px' }}>$20</p>
+              <p style={{ fontSize: '0.875rem', marginBottom: '24px', fontWeight: 600 }}>Built in 1 week</p>
               <ul style={{ listStyle: 'none', marginBottom: '32px', display: 'flex', flexDirection: 'column', gap: '12px', flex: 1 }}>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle size={20} color="var(--primary)" /> Full stack site</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle size={20} color="var(--primary)" /> Request form for buyers</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle size={20} color="var(--primary)" /> Better styling & animations</li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle size={20} color="var(--primary)" /> Multi-page site</li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle size={20} color="var(--primary)" /> Better design</li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle size={20} color="var(--primary)" /> Order form</li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle size={20} color="var(--primary)" /> Admin dashboard</li>
               </ul>
               <Link href="/request?tier=starter" className="btn btn-primary" style={{ width: '100%' }}>Choose Starter</Link>
             </div>
             <div className="card" style={{ display: 'flex', flexDirection: 'column', textAlign: 'left' }}>
               <h3 style={{ fontSize: '1.5rem', marginBottom: '8px' }}>Pro Store</h3>
-              <p style={{ fontWeight: 700, fontSize: '2rem', color: 'var(--text-main)', marginBottom: '24px' }}>$50</p>
+              <p style={{ fontWeight: 700, fontSize: '2rem', color: 'var(--text-main)', marginBottom: '8px' }}>$50</p>
+              <p style={{ fontSize: '0.875rem', marginBottom: '24px', fontWeight: 600 }}>Built in 1-2 weeks</p>
               <ul style={{ listStyle: 'none', marginBottom: '32px', display: 'flex', flexDirection: 'column', gap: '12px', flex: 1 }}>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle size={20} color="#94a3b8" /> Client dashboard</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle size={20} color="#94a3b8" /> AI text tools</li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle size={20} color="#94a3b8" /> Real-time inventory</li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle size={20} color="var(--primary)" /> Everything in Starter</li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle size={20} color="var(--primary)" /> Inventory tracker</li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle size={20} color="var(--primary)" /> AI marketing help</li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle size={20} color="var(--primary)" /> Manager dashboard</li>
               </ul>
-              <button disabled className="btn btn-secondary" style={{ width: '100%', opacity: 0.5 }}>Future Plan</button>
+              <Link href="/request?tier=pro" className="btn btn-secondary" style={{ width: '100%' }}>Choose Pro</Link>
             </div>
           </div>
         </div>
