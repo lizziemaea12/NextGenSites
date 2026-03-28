@@ -170,7 +170,7 @@ export default function Pricing() {
       {/* Final CTA */}
       <section className="bg-gradient text-center" style={{ padding: '100px 24px' }}>
         <div className="container">
-          <h2 style={{ fontSize: '3rem', marginBottom: '24px' }}>Let's Build Your Dream Site</h2>
+          <h2 style={{ fontSize: '3rem', marginBottom: '24px' }}>Let&apos;s Build Your Dream Site</h2>
           <p style={{ fontSize: '1.25rem', marginBottom: '48px', color: 'var(--text-main)', opacity: 0.8 }}>Start your request today and look like a pro next week.</p>
           <Link href="/request" className="btn btn-primary btn-large" style={{ padding: '20px 48px', fontSize: '1.25rem' }}>
             Get Your Site Now <Rocket size={24} style={{ marginLeft: '12px' }} />
