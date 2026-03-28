@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
@@ -6,17 +7,17 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(request: Request) {
   try {
     const data = await request.json();
-    const { 
-      businessName, 
-      whatYouSell, 
-      description, 
-      productsList, 
-      colors, 
-      style, 
-      name, 
-      contactInfo, 
-      tier, 
-      extras 
+    const {
+      businessName,
+      whatYouSell,
+      description,
+      productsList,
+      colors,
+      style,
+      name,
+      contactInfo,
+      tier,
+      extras
     } = data;
 
     const { data: emailData, error } = await resend.emails.send({
