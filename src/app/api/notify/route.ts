@@ -20,7 +20,7 @@ export async function POST(request: Request) {
       extras
     } = data;
 
-    const { data: emailData, error } = await resend.emails.send({
+    const { data: adminEmail, error: adminError } = await resend.emails.send({
       from: 'NextGen Sites <onboarding@resend.dev>',
       to: ['lizziemaea12@gmail.com'],
       subject: `New NextGen Sites Request - ${businessName}`,
@@ -49,11 +49,65 @@ export async function POST(request: Request) {
       `,
     });
 
-    if (error) {
-      return NextResponse.json({ error }, { status: 500 });
+    if (adminError) {
+      return NextResponse.json({ error: adminError }, { status: 500 });
     }
 
-    return NextResponse.json({ success: true, id: emailData?.id });
+    // Send confirmation email to customer if it's an email address
+    if (contactInfo && contactInfo.includes('@')) {
+      const isFreeTier = tier === 'free';
+      const customerSubject = "Your NextGen Sites request is confirmed! 🎉";
+
+      let customerHtml = '';
+      if (isFreeTier) {
+        customerHtml = `
+          <div style="font-family: sans-serif; line-height: 1.6; color: #333;">
+            <p>Hey ${name}!</p>
+            <p>I&apos;got your request for <strong>${businessName}</strong> and I&apos;m excited to build your site!</p>
+            <p>Here&apos;s what happens next:</p>
+            <ol>
+              <li>I&apos;ll review your info over the next 24 hours</li>
+              <li>I&apos;ll get started building your free site</li>
+              <li>A shareable link to your website will be in your email in 5-7 days!</li>
+            </ol>
+            <p>Your free site will include your products, contact info, and a clean design so customers can find you online. It will be ready within about a week.</p>
+            <p>If you have any questions in the meantime, reply to this email or reach out at <a href="mailto:lizziemaea12@gmail.com">lizziemaea12@gmail.com</a>.</p>
+            <p>Can&apos;t wait to help ${businessName} grow!</p>
+            <p>— Lizzie<br>NextGen Sites<br><a href="https://next-gen-sites.vercel.app">next-gen-sites.vercel.app</a></p>
+          </div>
+        `;
+      } else {
+        // Starter or Pro (Seller)
+        customerHtml = `
+          <div style="font-family: sans-serif; line-height: 1.6; color: #333;">
+            <p>Hey ${name}!</p>
+            <p>I got your request for <strong>${businessName}</strong> and it sounds like an awesome business — I&apos;d love to work with you!</p>
+            <p>Since you&apos;re interested in a paid tier, here&apos;s what happens next:</p>
+            <ol>
+              <li>I&apos;ll review your info over the next 24 hours</li>
+              <li>I&apos;ll reach out to discuss exactly what you want and confirm pricing</li>
+              <li>Once we agree on details, I&apos;ll get started building your site</li>
+              <li>I&apos;ll send you a video demonstration of your fully working site</li>
+              <li>You&apos;re welcome to suggest edits, and once we have a final version, you pay via Venmo or cash</li>
+              <li>I&apos;ll send you a shareable link with all your requested features within 24 hours!</li>
+            </ol>
+            <p>No payment is needed until we&apos;ve talked and you&apos;re happy with the plan.</p>
+            <p>If you have any questions in the meantime, reply to this email or reach out at <a href="mailto:lizziemaea12@gmail.com">lizziemaea12@gmail.com</a>.</p>
+            <p>Can&apos;t wait to help ${businessName} grow!</p>
+            <p>— Lizzie<br>NextGen Sites<br><a href="https://next-gen-sites.vercel.app">next-gen-sites.vercel.app</a></p>
+          </div>
+        `;
+      }
+
+      await resend.emails.send({
+        from: 'NextGen Sites <onboarding@resend.dev>',
+        to: [contactInfo.trim()],
+        subject: customerSubject,
+        html: customerHtml,
+      });
+    }
+
+    return NextResponse.json({ success: true, id: adminEmail?.id });
   } catch (err: any) {
     return NextResponse.json({ error: err.message }, { status: 500 });
   }
