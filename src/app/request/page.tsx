@@ -42,7 +42,7 @@ export default function RequestPage() {
         contact_info: formData.contactInfo,
         tier: formData.tier,
         notes: formData.extras,
-        created_at: new Date().toISOString(),
+        created_at: new Date().toLocaleString("en-US", { timeZone: "America/Chicago" }),
       },
     ]);
 
